@@ -355,4 +355,17 @@ The hallmark of an effective vaccine is 60% or better. This vaccine doesn't work
 
 The odds ratio is approximately how effective the vaccine is. The odds ratio for the drug users can be seen below 65. The effectiveness confidence interval for the drug users is 2.02 to 23.1.
 
+
 # Overall Results and Conclusions
+
+The covid-19 vaccine was effective in protecting men against the contraction of the disease. Though the confidence interval was on the somewhat lower side comparing the four with 54.7 to 72.3 being the confidence interval it still was proven effective. The covid-19 effectiveness was `r effectivenessguy` for men.
+
+The covid-19 vaccine was highly successful in protecting women against covid-19.The covid-19 effectiveness was `r effectivenessgal`. 
+
+The covid-19 vaccine was effective in treating people who identified as gay. They were protected the most with this particular vaccine with a confidence interval in 71.4 to 86.7. The covid-19 effectiveness was `r effectivenessgays` for gay individuals.
+
+The individuals that were drugusers were not protected by the vaccine. the confidence interval was 2.02 to 23.1 which is harmful and making them at increased risk for infection. Drug users that took the vaccine were 11 times as likely to get covid than the placebo group. The covid-19 effectiveness was `r effectivenessdrug` for drugusers.
+
+If you are a drug user it is not recommended to receive the vaccine. However, if you are a female, identify as gay, or even male the vaccine was reported to have been effective.
+The null that there is no difference in taking the vaccine can be accepted to the categories including drug users. the alternative, that the vaccine works and is effective, can be accepted for the gals(women,) guys(male) and gay people. 
+
