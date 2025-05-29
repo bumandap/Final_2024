@@ -148,6 +148,42 @@ These numerical results show specific percentages of women that got covid-19 aft
 The women that took the vaccine ans contracted covid-19 was 35%, just as approximated in the plots prior. The gals that took the placebo and got covid-19 was 65%. The vaccine is in fact effective in protecting gals against the contraction of covid-19. 
 The gals that took the vaccine were less as likely to get covid-19 than those taking the placebo.
 
+### Inferential 
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+galsfish <- fisher.test(table1)
+galsfish
+```
+
+The information to play close attention to among all of these results is the output of the Fisher's Exact test. The p-value displayed above is extremely small at 0.0000000000000002. This is an extremely tiny number. seeing this number means that these results are not likely to occur by chance and so the null hypothesis can be rejected in favor of the alternative.
+
+
+The Fishers's Exact Test illustrates that the odds ratio is 2.8
+gals(Women) who got the drug were about 0.36 times more likely to get covid-19 than women that only took the placebo.
+
+```{r}
+effect <- galsfish$p.value/(galsfish$p.value +1)
+effectivenessgal = galsfish$estimate/(galsfish$estimate +1)*100
+print(effectivenessgal)
+```
+
+```{r}
+low=(galsfish$conf.int[1]/(galsfish$conf.int[1] +1))*100
+hi=(galsfish$conf.int[2]/(galsfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+## Effectiveness Confidence Interval `r low`  to `r hi`
+
+Above is the effectiveness for the covid-19 for gals(females). If the effectiveness is above 50% that means that the vaccine is effective. Based on the interval seen above, we can conclude that the vaccine is highly effective in protecting gals from getting covid-19. 
+
+The hallmark of an effective vaccine is 60% or better. This vaccine works great in protecting gals(women) from contructing covid-19.
+
+The odds ratio is approximately how effective the vaccine is. The odds ratio for the gals can be seen above as 74. The effectiveness confidence interval for the gals is 68.75 to 78.26.
+
 ## LGBTQ
 
 
