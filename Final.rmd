@@ -330,4 +330,29 @@ The Fishers's Exact Test illustrates that the odds ratio is 0.087
 drug users who got the vaccine were at higher risk to get Covid-19 than drug users that took the placebo.
 
 The null hypothesis is rejected in favor the the alternative. The drug is ineffective in preventing the chances of getting covid-19 in drug users.
+
+
+```{r}
+effect <- drugfish$p.value/(drugfish$p.value +1)
+effectivenessdrug = drugfish$estimate/(drugfish$estimate +1)*100
+print(effectivenessdrug)
+```
+
+```{r}
+low=(drugfish$conf.int[1]/(drugfish$conf.int[1] +1))*100
+hi=(drugfish$conf.int[2]/(drugfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+## Effectiveness Confidence Interval `r low`  to `r hi`
+
+
+
+
+Above, is the effectiveness for the covid-19 for drug users, If the effectiveness is above 50% that means that the vaccine is effective. Based on the interval seen above, we can conclude that the vaccine is not effective in protecting drug users from getting covid-19. 
+
+The hallmark of an effective vaccine is 60% or better. This vaccine doesn't work great in protecting drug users from contracting covid-19.
+
+The odds ratio is approximately how effective the vaccine is. The odds ratio for the drug users can be seen below 65. The effectiveness confidence interval for the drug users is 2.02 to 23.1.
+
 # Overall Results and Conclusions
